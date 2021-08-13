@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './Components/about/about.component';
+import { AdminComponent } from './Components/admin/admin.component';
 import { BookingsStatusComponent } from './Components/bookings-status/bookings-status.component';
 import { DepartmentsComponent } from './Components/departments/departments.component';
 import { FacilitiesComponent } from './Components/facilities/facilities.component';
@@ -11,6 +12,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 
 const routes: Routes = [
+  { path: 'admin', component: AdminComponent},
   { path: 'departments', component: DepartmentsComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -28,6 +30,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule {}
 export const routingComponents = [
+  AdminComponent,
   AboutComponent,
   DepartmentsComponent,
   HomeComponent,

@@ -1,0 +1,13 @@
+.an {
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: cyan;
+  padding: 10px;
+}
+
+.head {
+  background-color: rgb(150, 150, 236);
+  margin-top: 50px;
+  padding: 10px;
+  text-align: center;
+}
