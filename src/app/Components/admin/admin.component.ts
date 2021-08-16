@@ -69,7 +69,7 @@ export class AdminComponent implements OnInit {
     });
   }
   deleteHospital(row: any) {
-    this.api.deleteHospital(row.id).subscribe((id) => {
+    this.api.deleteHospital(row.id).subscribe((res) => {
       alert('Hospital Deleted');
       this.getAllHospital();
     });
