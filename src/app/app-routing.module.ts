@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent },
   { path: 'facilities', component: FacilitiesComponent },
   { path: 'register', component: RegisterComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

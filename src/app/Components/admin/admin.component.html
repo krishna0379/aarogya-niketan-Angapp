@@ -26,55 +26,51 @@
     </p>
   </div>
 </section>
+<!-- tabel -->
+<div class="col-md-12">
+  <div class="table-container table-responsive">
+    <table class="table mt-3">
+      <thead class="table table-bordered table-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Hosptial Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile</th>
+          <th scope="col">Location</th>
+          <th scope="col">Address</th>
+          <th scope="col">Beds Available</th>
+          <th scope="col">Ventilation</th>
+          <th scope="col">ICUs</th>
+          <th scope="col">IsolationWard</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody class="table table-bordered table-success">
+        <tr *ngFor="let row of hospitalData">
+          <td>{{ row.id }}</td>
+          <td>{{ row.hospitalName }}</td>
+          <td>{{ row.email }}</td>
+          <td>{{ row.mobile }}</td>
+          <td>{{ row.location }}</td>
+          <td>{{ row.address }}</td>
+          <td>{{ row.bedsAvailable }}</td>
+          <td>{{ row.ventilation }}</td>
+          <td>{{ row.icus }}</td>
+          <td>{{ row.isolationWard }}</td>
 
-<div class="container">
-  <table class="table mt-3">
-    <thead class="table table-bordered table-dark">
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Hosptial Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Mobile</th>
-        <th scope="col">Location</th>
-        <th scope="col">Address</th>
-        <th scope="col">Beds Available</th>
-        <th scope="col">Ventilation</th>
-        <th scope="col">ICUs</th>
-        <th scope="col">IsolationWard</th>
-        <th scope="col">Action</th>
-      </tr>
-    </thead>
-    <tbody class="table table-bordered table-success">
-      <tr *ngFor="let row of hospitalData">
-        <td>{{ row.id }}</td>
-        <td>{{ row.hospitalName }}</td>
-        <td>{{ row.email }}</td>
-        <td>{{ row.mobile }}</td>
-        <td>{{ row.location }}</td>
-        <td>{{ row.address }}</td>
-        <td>{{ row.bedsAvailable }}</td>
-        <td>{{ row.ventilation }}</td>
-        <td>{{ row.icus }}</td>
-        <td>{{ row.isolationWard }}</td>
+          <td>
+            <button (click)="onEdit(row)" class="btn btn-info mr-2">
+              Edit
+            </button>
 
-        <td>
-          <button
-            type="button"
-            (click)="onEdit(row)"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-            class="btn btn-info mr-2"
-          >
-            Edit
-          </button>
-
-          <button (click)="deleteHospital(row)" class="btn btn-danger">
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+            <button (click)="deleteHospital(row)" class="btn btn-danger">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <!-- Modal -->

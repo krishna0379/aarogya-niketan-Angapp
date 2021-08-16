@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ApiService } from './shared/api.service';
 
 @NgModule({
   declarations: [AppComponent, routingComponents],
@@ -17,7 +18,7 @@ import { AppComponent } from './app.component';
     RouterModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

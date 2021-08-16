@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/shared/api.service';
 import { HospitalModal } from './adimin.hospital.model';
 @Component({
@@ -8,7 +9,8 @@ import { HospitalModal } from './adimin.hospital.model';
   styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent implements OnInit {
-  formValue!: FormGroup;
+  
+    formValue!: FormGroup;
   hospitalModalObj: HospitalModal = new HospitalModal();
   hospitalData!: any;
   showAdd!: boolean;
@@ -67,7 +69,7 @@ export class AdminComponent implements OnInit {
     });
   }
   deleteHospital(row: any) {
-    this.api.deleteHospital(row.id).subscribe((res) => {
+    this.api.deleteHospital(row.id).subscribe((id) => {
       alert('Hospital Deleted');
       this.getAllHospital();
     });
@@ -109,5 +111,5 @@ export class AdminComponent implements OnInit {
         this.formValue.reset();
         this.getAllHospital();
       });
-  }
+  } 
 }

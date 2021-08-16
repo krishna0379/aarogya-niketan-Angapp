@@ -2,26 +2,76 @@
   <div class="container mt-5">
     <h1 class="jumbotron-heading">Hosptial Information</h1>
     <p style="color: rgb(110, 14, 219)">Search Our Nearer Hosptial</p>
-    <form class="d-flex row ">
+    <form class="d-flex row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-      <input
-        class="form-control mr-2 alert-primary"
-        type="search"
-        placeholder="Search Our City Here..."
-        aria-label="Search"
-      />
+        <input
+          class="form-control mr-2 alert-primary"
+          type="search"
+          placeholder="Search Our City Here..."
+          aria-label="Search"
+        />
       </div>
-     <div class="col-md-1"> <button class="btn btn-outline-success" type="submit">Search</button></div>
+      <div class="col-md-1">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </div>
     </form>
   </div>
 </section>
 
+<!-- 
+    
+<div class="container">
+  <table class="table mt-3">
+    <thead class="table table-bordered table-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Hosptial Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Location</th>
+        <th scope="col">Address</th>
+        <th scope="col">Beds Available</th>
+        <th scope="col">Ventilation</th>
+        <th scope="col">ICUs</th>
+        <th scope="col">IsolationWard</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody class="table table-bordered table-success">
+      <tr *ngFor="let row of hospitalData">
+        <td>{{ row.id }}</td>
+        <td>{{ row.hospitalName }}</td>
+        <td>{{ row.email }}</td>
+        <td>{{ row.mobile }}</td>
+        <td>{{ row.location }}</td>
+        <td>{{ row.address }}</td>
+        <td>{{ row.bedsAvailable }}</td>
+        <td>{{ row.ventilation }}</td>
+        <td>{{ row.icus }}</td>
+        <td>{{ row.isolationWard }}</td>
 
+        <td>
+          <button
+            type="button"
+            (click)="onEdit(row)"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            class="btn btn-info mr-2"
+          >
+            Edit
+          </button>
 
+          <button (click)="deleteHospital(row)" class="btn btn-danger">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
 
-
-<div class="album py-5 bg-light">
+<!-- <div class="album py-5 bg-light">
   <div class="container">
     <div class="row">
       <div class="col-md-4">
@@ -271,4 +321,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
