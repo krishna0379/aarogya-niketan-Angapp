@@ -1,7 +1,19 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
- 
+
+.body {
+  height: 100%;
+  z-index: 30;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: auto;
+  background: linear-gradient(180deg, rgb(218, 16, 236), hsl(229, 64%, 22%));
+  background-size: 600% 100%;
+  animation: gradient 5s linear infinite;
+  animation-direction: alternate-reverse;
+}
 
 input[type="text"],
 input[type="password"] {
@@ -63,5 +75,10 @@ span.psw {
   }
   .cancelbtn {
     width: 100%;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }

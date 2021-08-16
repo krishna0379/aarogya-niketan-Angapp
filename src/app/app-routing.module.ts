@@ -10,9 +10,10 @@ import { HomeComponent } from './Components/home/home.component';
 import { HospitalInformationComponent } from './Components/hospital-information/hospital-information.component';
 import { LoginComponent } from './Components/login/login.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
+import { RegisterComponent } from './Components/register/register.component';
 
 const routes: Routes = [
-  { path: 'admin', component: AdminComponent},
+  { path: 'admin', component: AdminComponent },
   { path: 'departments', component: DepartmentsComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'facilities', component: FacilitiesComponent },
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({
@@ -39,5 +41,6 @@ export const routingComponents = [
   FooterComponent,
   HospitalInformationComponent,
   LoginComponent,
+  RegisterComponent,
   NavbarComponent,
 ];

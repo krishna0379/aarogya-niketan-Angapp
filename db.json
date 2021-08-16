@@ -1,19 +1,76 @@
 {
-  "posts": [
+  "HospiatalsInfo": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "hospitalName": "Krishna Multi Speciality Hospital",
+      "mobile": "989768590",
+      "email": "krishna@gmail.com",
+      "location": "Bhimavaram",
+      "address": "sai ram nagar",
+      "bedsAvailable": 24,
+      "ventilation": 56,
+      "icus": 34,
+      "isolationWard": 32
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "hospitalName": "Krishna Multi Speciality Hospital",
+      "mobile": "989768590",
+      "email": "krishna@gmail.com",
+      "location": "Bhimavaram",
+      "address": "sai ram nagar",
+      "bedsAvailable": 24,
+      "ventilation": 56,
+      "icus": 34,
+      "isolationWard": 32
+    },
+    {
+      "id": 2,
+      "hospitalName": "Krishna Multi Speciality Hospital",
+      "mobile": "989768590",
+      "email": "krishna@gmail.com",
+      "location": "Bhimavaram",
+      "address": "sai ram nagar",
+      "bedsAvailable": 24,
+      "ventilation": 56,
+      "icus": 34,
+      "isolationWard": 32
+    },
+    {
+      "id": 4,
+      "hospitalName": "Krishna Multi Speciality Hospital",
+      "mobile": "989768590",
+      "email": "krishna@gmail.com",
+      "location": "Bhimavaram",
+      "address": "sai ram nagar",
+      "bedsAvailable": 24,
+      "ventilation": 56,
+      "icus": 34,
+      "isolationWard": 32
+    },
+    {
+      "id": 5,
+      "hospitalName": "Krishna Multi Speciality Hospital",
+      "mobile": "989768590",
+      "email": "krishna@gmail.com",
+      "location": "Bhimavaram",
+      "address": "sai ram nagar",
+      "bedsAvailable": 24,
+      "ventilation": 56,
+      "icus": 34,
+      "isolationWard": 32
+    },
+    {
+      "id": 6,
+      "hospitalName": "Krishna Multi Speciality Hospital",
+      "mobile": "989768590",
+      "email": "krishna@gmail.com",
+      "location": "Bhimavaram",
+      "address": "sai ram nagar",
+      "bedsAvailable": 24,
+      "ventilation": 56,
+      "icus": 34,
+      "isolationWard": 32
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
