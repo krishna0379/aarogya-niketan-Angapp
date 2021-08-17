@@ -1,5 +1,5 @@
 {
-  "HospiatalsInfo": [
+  "hospiatalsInfo": [
     {
       "id": 1,
       "hospitalName": "Krishna Multi Speciality Hospital",
@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "hospitalName": "Krishna Multi Speciality Hospital",
+      "hospitalName": "sai Multi Speciality Hospital",
       "mobile": "989768590",
       "email": "krishna@gmail.com",
       "location": "Bhimavaram",
@@ -25,8 +25,8 @@
       "isolationWard": 32
     },
     {
-      "id": 2,
-      "hospitalName": "Krishna Multi Speciality Hospital",
+      "id": 3,
+      "hospitalName": "Kvp  Multi Speciality Hospital",
       "mobile": "989768590",
       "email": "krishna@gmail.com",
       "location": "Bhimavaram",
@@ -38,31 +38,7 @@
     },
     {
       "id": 4,
-      "hospitalName": "Krishna Multi Speciality Hospital",
-      "mobile": "989768590",
-      "email": "krishna@gmail.com",
-      "location": "Bhimavaram",
-      "address": "sai ram nagar",
-      "bedsAvailable": 24,
-      "ventilation": 56,
-      "icus": 34,
-      "isolationWard": 32
-    },
-    {
-      "id": 5,
-      "hospitalName": "Krishna Multi Speciality Hospital",
-      "mobile": "989768590",
-      "email": "krishna@gmail.com",
-      "location": "Bhimavaram",
-      "address": "sai ram nagar",
-      "bedsAvailable": 24,
-      "ventilation": 56,
-      "icus": 34,
-      "isolationWard": 32
-    },
-    {
-      "id": 6,
-      "hospitalName": "Krishna Multi Speciality Hospital",
+      "hospitalName": "srk Multi Speciality Hospital",
       "mobile": "989768590",
       "email": "krishna@gmail.com",
       "location": "Bhimavaram",
@@ -72,6 +48,31 @@
       "icus": 34,
       "isolationWard": 32
     }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "name": "sai",
+      "email": "sai@gmail.com",
+      "userName": "sai09",
+      "password": "037ddgi",
+      "mobile": "12345908"
+    },
+    {
+      "id": 2,
+      "name": "krishna",
+      "email": "krishna0@gmail.com",
+      "userName": "kitti09",
+      "password": "032dhi",
+      "mobile": "12445908"
+    },
+    {
+      "id": 3,
+      "name": "saikrish",
+      "email": "sai@gmail.com",
+      "userName": "Kittu09",
+      "password": "037dhi",
+      "mobile": "133456308"
+    }
   ]
-
 }

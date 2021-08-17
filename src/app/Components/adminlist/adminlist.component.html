@@ -1,0 +1,131 @@
+<table class="table container">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of adminData">
+      <td>{{ row.name }}</td>
+      <td>{{ row.email }}</td>
+      <td>{{ row.mobile }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          (click)="onEdit(row)"
+        >
+          Edit
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="deleteAdmin(row)">
+          Delete
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-secondary" (click)="getAdminById(row)">
+          Details
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- from -->
+        <form [formGroup]="formValue">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              placeholder="Enter Full Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Email Id</label>
+            <input
+              type="email"
+              class="form-control"
+              aria-describedby="emailHelp"
+              placeholder="Enter Email Id"
+              formControlName="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">User Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="User Name"
+              formControlName="userName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              formControlName="password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Mobile</label>
+            <input
+              type="moblie"
+              class="form-control"
+              placeholder="Mobile"
+              formControlName="mobile"
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="updateAdminDetails()"
+        >
+          update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

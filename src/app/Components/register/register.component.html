@@ -8,12 +8,14 @@
     <div class="row">
       <div class="col-6 d-none d-md-block">
         <div class="col-12">
-          <form ref="{formEL}">
+          <form [fromGroup]="form - group">
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
-                placeholder="Enter Name"
+                placeholder="Enter Full Name"
+                formControlName="name"
+                required
               />
             </div>
 
@@ -21,7 +23,9 @@
               <input
                 type="email"
                 class="form-control"
-                placeholder="Enter Email"
+                placeholder="Enter vaild Email"
+                formControlName="email"
+                required
               />
             </div>
 
@@ -29,12 +33,10 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="Enter Mobile"
+                placeholder="Enter User Name"
+                formControlName="userName"
+                required
               />
-            </div>
-
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Enter Pan" />
             </div>
 
             <div class="form-group">
@@ -42,10 +44,27 @@
                 type="password"
                 class="form-control"
                 placeholder="Enter password"
+                formControlName="password"
+                required
               />
             </div>
+
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Enter Mobile"
+                formControlName="mobile"
+                required
+              />
+            </div>
+
             <div>
-              <Button variant="outline-primary" class="w-100 mb-3">
+              <Button
+                variant="outline-primary"
+                class="w-100 mb-3"
+                (click)="postAdminDetails()"
+              >
                 Register
               </Button>
             </div>

@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
-import { ApiService } from 'src/app/shared/api.service';
-import { HospitalModal } from './adimin.hospital.model';
- 
+import { HospitalModel } from 'src/app/models/hospital.model';
+import { HospitalService } from 'src/app/services/hospital.service';
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
+  providers: [HospitalService],
 })
 export class AdminComponent implements OnInit {
-  
-    formValue!: FormGroup;
-  hospitalModalObj: HospitalModal = new HospitalModal();
+  @Input() item = '';
+  formValue!: FormGroup;
+  hospitalModel: HospitalModel = new HospitalModel();
   hospitalData!: any;
-  showAdd!: boolean;
-  showUpdate!: boolean;
-  constructor(private formbuilder: FormBuilder, private api: ApiService) {}
+  //showAdd!: boolean;
+  //showUpdate!: boolean;
+  constructor(
+    private formbuilder: FormBuilder,
+    private hospitalService: HospitalService
+  ) {}
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
@@ -30,57 +33,68 @@ export class AdminComponent implements OnInit {
       icus: [''],
       isolationWard: [''],
     });
-    this.getAllHospital();
+    this.getAllHospitals();
   }
 
-  clickAddHospital() {
+  /* clickAddHospital() {
     this.formValue.reset();
     this.showAdd = true;
     this.showUpdate = false;
-  }
+  } */
 
   postHospitalDetails() {
-    this.hospitalModalObj.hospitalName = this.formValue.value.hospitalName;
-    this.hospitalModalObj.email = this.formValue.value.email;
-    this.hospitalModalObj.mobile = this.formValue.value.mobile;
-    this.hospitalModalObj.location = this.formValue.value.location;
-    this.hospitalModalObj.address = this.formValue.value.address;
-    this.hospitalModalObj.bedAvailable = this.formValue.value.bedsAvailable;
-    this.hospitalModalObj.ventilation = this.formValue.value.ventilation;
-    this.hospitalModalObj.icus = this.formValue.value.icus;
-    this.hospitalModalObj.isolationWard = this.formValue.value.isolationWard;
+    this.hospitalModel.hospitalName = this.formValue.value.hospitalName;
+    this.hospitalModel.email = this.formValue.value.email;
+    this.hospitalModel.mobile = this.formValue.value.mobile;
+    this.hospitalModel.location = this.formValue.value.location;
+    this.hospitalModel.address = this.formValue.value.address;
+    this.hospitalModel.bedsAvailable = this.formValue.value.bedsAvailable;
+    this.hospitalModel.ventilation = this.formValue.value.ventilation;
+    this.hospitalModel.icus = this.formValue.value.icus;
+    this.hospitalModel.isolationWard = this.formValue.value.isolationWard;
 
-    this.api.postHospital(this.hospitalModalObj).subscribe(
+    this.hospitalService.createHospital(this.hospitalModel).subscribe(
       (res) => {
         console.log(res);
         alert('Hospital is Added successfully..');
         let ref = document.getElementById('cancel');
         ref?.click();
         this.formValue.reset();
-        this.getAllHospital();
+        this.getAllHospitals();
       },
       (err) => {
         alert('Something went Wrong');
       }
     );
   }
-  getAllHospital() {
-    this.api.getHospital().subscribe((res) => {
+
+  getAllHospitals() {
+    this.hospitalService.getAllHospitals().subscribe((res) => {
       this.hospitalData = res;
     });
   }
-  deleteHospital(row: any) {
-    this.api.deleteHospital(row.id).subscribe((res) => {
-      alert('Hospital Deleted');
-      this.getAllHospital();
+
+  getHospitalById(row: any) {
+    this.hospitalService.getHospitalById(row.id).subscribe((res) => {
+      alert(
+        `{Id: ${row.id} \n Name: ${row.name} \n Email: ${row.email} \n Username: ${row.userName}}`
+      );
     });
   }
-  onEdit(row: any) {
-    this.showAdd = false;
-    this.showUpdate = true;
 
-    this.hospitalModalObj.id = row.id;
-    
+  deleteHospital(row: any) {
+    this.hospitalService.deleteHospital(row.id).subscribe((res) => {
+      alert('Hospital Deleted');
+      this.getAllHospitals();
+    });
+  }
+
+  onEdit(row: any) {
+    /*  this.showAdd = false;
+    this.showUpdate = true; */
+
+    this.hospitalModel.id = row.id;
+
     this.formValue.controls['hospitalName'].setValue(row.hospitalName);
     this.formValue.controls['email'].setValue(row.email);
     this.formValue.controls['mobile'].setValue(row.mobile);
@@ -93,24 +107,30 @@ export class AdminComponent implements OnInit {
   }
 
   updateHospitalDetails() {
-    this.hospitalModalObj.hospitalName = this.formValue.value.hospitalName;
-    this.hospitalModalObj.email = this.formValue.value.email;
-    this.hospitalModalObj.mobile = this.formValue.value.mobile;
-    this.hospitalModalObj.location = this.formValue.value.location;
-    this.hospitalModalObj.address = this.formValue.value.address;
-    this.hospitalModalObj.bedAvailable = this.formValue.value.bedsAvailable;
-    this.hospitalModalObj.ventilation = this.formValue.value.ventilation;
-    this.hospitalModalObj.icus = this.formValue.value.icus;
-    this.hospitalModalObj.isolationWard = this.formValue.value.isolationWard;
+    this.hospitalModel.hospitalName = this.formValue.value.hospitalName;
+    this.hospitalModel.email = this.formValue.value.email;
+    this.hospitalModel.mobile = this.formValue.value.mobile;
+    this.hospitalModel.location = this.formValue.value.location;
+    this.hospitalModel.address = this.formValue.value.address;
+    this.hospitalModel.bedsAvailable = this.formValue.value.bedsAvailable;
+    this.hospitalModel.ventilation = this.formValue.value.ventilation;
+    this.hospitalModel.icus = this.formValue.value.icus;
+    this.hospitalModel.isolationWard = this.formValue.value.isolationWard;
 
-    this.api
-      .updateHospital(this.hospitalModalObj, this.hospitalModalObj.id)
-      .subscribe((res) => {
-        alert('Updated SuccessFully');
-        let ref = document.getElementById('cancel');
-        ref?.click();
-        this.formValue.reset();
-        this.getAllHospital();
-      });
-  } 
+    this.hospitalService
+      .updateHospital(this.hospitalModel, this.hospitalData.id)
+      .subscribe(
+        (res) => {
+          console.log(res);
+          alert('Hospital Details Updated successfully..');
+          let ref = document.getElementById('cancel');
+          ref?.click();
+          this.formValue.reset();
+          this.getAllHospitals();
+        },
+        (err) => {
+          alert('Something went Wrong');
+        }
+      );
+  }
 }
