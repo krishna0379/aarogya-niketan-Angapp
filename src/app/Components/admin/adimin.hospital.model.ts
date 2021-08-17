@@ -1,5 +1,5 @@
 export class HospitalModal {
-  id: number=0;
+  id: number = 0;
   hospitalName?: String;
   email?: string;
   mobile?: number;

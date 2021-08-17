@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/shared/api.service';
 import { HospitalModal } from './adimin.hospital.model';
+ 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
