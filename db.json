@@ -38,33 +38,25 @@
     },
     {
       "id": 4,
-      "hospitalName": "he",
-      "mobile": 345455,
-      "email": "saagv",
-      "location": "dfg",
-      "address": "dfrf",
-      "bedsAvailable": 34,
+      "hospitalName": "appolo",
+      "mobile": 667366368,
+      "email": "appolo@gmail.com",
+      "location": "vizag",
+      "address": "beach road",
+      "bedsAvailable": 23,
       "ventilation": 34,
-      "icus": 23,
-      "isolationWard": 456
+      "icus": 12,
+      "isolationWard": 2
     }
   ],
   "admins": [
     {
       "id": 1,
-      "name": "kittu",
+      "name": "kittu006",
       "email": "sai@gmail.com",
       "userName": "sai09",
       "password": "037ddgi",
       "mobile": "12345908"
-    },
-    {
-      "id": 2,
-      "name": "krishna",
-      "email": "krishna0@gmail.com",
-      "userName": "kitti09",
-      "password": "032dhi",
-      "mobile": "12445908"
     },
     {
       "id": 5,
@@ -84,11 +76,11 @@
     },
     {
       "id": 7,
-      "name": "",
-      "email": "",
-      "userName": "",
-      "password": "",
-      "mobile": ""
+      "name": "sai",
+      "email": "sai@gmail.com",
+      "userName": "Saikk",
+      "password": "08huug7gt7",
+      "mobile": 5354565758
     }
   ]
 }

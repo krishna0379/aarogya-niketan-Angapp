@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AdminModel } from 'src/app/models/admin.model';
 import { AdminService } from 'src/app/services/admin.service';
@@ -9,8 +9,7 @@ import { AdminService } from 'src/app/services/admin.service';
   styleUrls: ['./register.component.css'],
   providers: [AdminService],
 })
-export class RegisterComponent implements OnInit { 
- 
+export class RegisterComponent implements OnInit {
   formValue!: FormGroup;
   adminModel: AdminModel = new AdminModel();
   adminData!: any;

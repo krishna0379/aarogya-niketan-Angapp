@@ -89,12 +89,11 @@ export class AdminlistComponent implements OnInit {
       .updateAdmin(this.adminModel, this.adminModel.id)
       .subscribe((res) => {
         alert('User Details Updated');
-
         this.formValue.reset();
         this.getAllAdmins();
       });
   }
-  updateAdminDetails2(row: any) {
+ /*  updateAdminDetails2(row: any) {
     this.adminModel.name = this.formValue.value.name;
     this.adminModel.email = this.formValue.value.email;
     this.adminModel.userName = this.formValue.value.userName;
@@ -102,9 +101,8 @@ export class AdminlistComponent implements OnInit {
     this.adminModel.mobile = this.formValue.value.mobile;
     this.adminService.updateAdmin(this.adminData, row).subscribe((res) => {
       alert('User Details Updated');
-
       this.formValue.reset();
       this.getAllAdmins();
     });
-  }
+  } */
 }

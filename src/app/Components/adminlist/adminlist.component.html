@@ -21,7 +21,12 @@
           <td>{{ row.email }}</td>
           <td>{{ row.mobile }}</td>
           <td>
-            <button class="btn btn-info mr-2" (click)="onEdit(row)">
+            <button
+              class="btn btn-info mr-2"
+              (click)="onEdit(row)"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
               Edit
             </button>
 
@@ -40,7 +45,7 @@
 </div>
 
 <!-- Modal -->
-<!-- <div
+<div
   class="modal fade"
   id="exampleModal"
   tabindex="-1"
@@ -50,7 +55,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Admin Details</h5>
         <button
           type="button"
           class="btn-close"
@@ -59,7 +64,6 @@
         ></button>
       </div>
       <div class="modal-body">
-         from 
         <form [formGroup]="formValue">
           <div class="form-group">
             <label for="exampleInputEmail1">Name</label>
@@ -76,7 +80,6 @@
             <input
               type="email"
               class="form-control"
-              aria-describedby="emailHelp"
               placeholder="Enter Email Id"
               formControlName="email"
               required
@@ -105,7 +108,7 @@
           <div class="form-group">
             <label for="exampleInputPassword1">Mobile</label>
             <input
-              type="moblie"
+              type="number"
               class="form-control"
               placeholder="Mobile"
               formControlName="mobile"
@@ -115,17 +118,11 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Close
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary"
-          (click)="updateAdminDetails()"
-        >
+        <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-primary" (click)="updateAdminDetails()">
           update
         </button>
       </div>
     </div>
   </div>
-</div> -->
+</div>
