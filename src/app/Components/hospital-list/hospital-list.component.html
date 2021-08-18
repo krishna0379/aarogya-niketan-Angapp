@@ -1,6 +1,6 @@
-<section class="jumbotron text-center">
-  <div class="container mt-5">
-    <h1 class="jumbotron-heading">Hosptials List</h1>
+<section class="jumbotron text-center section">
+  <div class="container mt-3">
+    <h1 class="jumbotron-heading">HOSPITALS LIST</h1>
   </div>
 </section>
 <!-- tabel  -->
@@ -55,8 +55,119 @@
   <br />
 </div>
 
-<!-- Modal -->
 <div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Hospital Update From:
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Hospital Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="hospitalName"
+              placeholder="Enter Hospital Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1"> Address</label>
+            <input
+              type="text"
+              class="form-control"
+              aria-describedby="emailHelp"
+              placeholder="Enter Address"
+              formControlName="address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Beds Avaibility</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Beds"
+              formControlName="bedsAvailable"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">ICU Beds</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Icu Beds"
+              formControlName="icus"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contact Details</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Contact"
+              formControlName="mobile"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1"> Ventilations</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter the Ventilation"
+              formControlName="ventilation"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1"> IsolationWards</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Update the IsolationWards"
+              formControlName="isolationWard"
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="updateHospitalDetails()"
+        >
+          update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<!-- <div
   class="modal fade"
   id="exampleModal"
   tabindex="-1"
@@ -186,4 +297,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

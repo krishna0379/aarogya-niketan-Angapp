@@ -4,3 +4,16 @@ body {
   height: 100%;
   margin: 0;
 }
+
+.body {
+  z-index: 100%;
+  overflow: auto;
+  background: linear-gradient(180deg, rgb(218, 16, 236), hsl(229, 64%, 22%));
+  background-size: 600% 100%;
+  background-attachment: fixed;
+  animation: gradient 5s linear infinite;
+  animation-direction: alternate-reverse;
+}
+.section{
+  background-color: rgb(191, 142, 236);
+}
