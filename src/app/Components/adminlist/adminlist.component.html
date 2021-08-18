@@ -1,46 +1,46 @@
-<table class="table container">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Mobile</th>
-      <th scope="col">Update</th>
-      <th scope="col">Delete</th>
-      <th scope="col">Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let row of adminData">
-      <td>{{ row.name }}</td>
-      <td>{{ row.email }}</td>
-      <td>{{ row.mobile }}</td>
-      <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-          (click)="onEdit(row)"
-        >
-          Edit
-        </button>
-      </td>
-      <td>
-        <button type="button" class="btn btn-danger" (click)="deleteAdmin(row)">
-          Delete
-        </button>
-      </td>
-      <td>
-        <button type="button" class="btn btn-secondary" (click)="getAdminById(row)">
-          Details
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<section class="jumbotron text-center mt-5">
+  <div class="container">
+    <h1 class="jumbotron-heading">Admins Registered List</h1>
+  </div>
+</section>
+
+<div class="col-md-12">
+  <div class="table-conatiner table-responsive">
+    <table class="table mt-3">
+      <thead class="table table-bordered table-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="table table-bordered table-success">
+        <tr *ngFor="let row of adminData">
+          <td>{{ row.name }}</td>
+          <td>{{ row.email }}</td>
+          <td>{{ row.mobile }}</td>
+          <td>
+            <button class="btn btn-info mr-2" (click)="onEdit(row)">
+              Edit
+            </button>
+
+            <button class="btn btn-danger" (click)="deleteAdmin(row)">
+              Delete
+            </button>
+
+            <button class="btn btn-warning" (click)="getAdminById(row)">
+              Details
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <!-- Modal -->
-<div
+<!-- <div
   class="modal fade"
   id="exampleModal"
   tabindex="-1"
@@ -59,7 +59,7 @@
         ></button>
       </div>
       <div class="modal-body">
-        <!-- from -->
+         from 
         <form [formGroup]="formValue">
           <div class="form-group">
             <label for="exampleInputEmail1">Name</label>
@@ -128,4 +128,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

@@ -1,33 +1,9 @@
 <section class="jumbotron text-center">
-  <div class="container">
-    <h1 class="jumbotron-heading">Admin DashBoard</h1>
-
-    <p>
-      <a href="/admin-list" class="btn btn-primary mt-2 mr-3"
-        >Admin Registered List</a
-      >
-      <a href="/booking-status" class="btn btn-primary mt-2 mr-3"
-        >Booking Status</a
-      >
-
-      <a href="/departments" class="btn btn-primary mt-2 mr-3"> Departments</a>
-
-      <a href="/hospital-list" class="btn btn-primary mt-2 mr-3"
-        >Hosptial Information</a
-      >
-    </p>
-    <p>
-      <a
-        href="/generate-hospital"
-        (click)="clickAddHospital()"
-        class="btn btn-success mt-2 mr-3"
-      >
-        Add Hospital</a
-      >
-    </p>
+  <div class="container mt-5">
+    <h1 class="jumbotron-heading">Hosptials List</h1>
   </div>
 </section>
-<!-- tabel  
+<!-- tabel  -->
 <div class="col-md-12">
   <div class="table-container table-responsive">
     <table class="table mt-3">
@@ -72,12 +48,11 @@
       </tbody>
     </table>
   </div>
-  <br /><br />
-  <hr />
-  <hr />
-</div> -->
+  <br />
+  <br />
+</div>
 
-<!-- Modal
+<!-- Modal -->
 <div
   class="modal fade"
   id="exampleModal"
@@ -213,9 +188,6 @@
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
           Close
         </button>
-        <button (click)="postHospitalDetails()" class="btn btn-primary">
-          Add
-        </button>
         <button (click)="updateHospitalDetails()" class="btn btn-primary">
           Update
         </button>
@@ -223,4 +195,3 @@
     </div>
   </div>
 </div>
- -->

@@ -3,7 +3,77 @@
     <h1 class="jumbotron-heading">Register Here</h1>
   </div>
 </section>
-<div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-3 col-md-3 d-none d-md-block"></div>
+    <div class="col-12 col-md-6"></div>
+    <form [formGroup]="formValue">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="name"
+          placeholder="Enter Full Name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Email Id</label>
+        <input
+          type="email"
+          class="form-control"
+          aria-describedby="emailHelp"
+          placeholder="Enter Email Id"
+          formControlName="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">User Name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="User Name"
+          formControlName="userName"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Password"
+          formControlName="password"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Mobile</label>
+        <input
+          type="mobile"
+          class="form-control"
+          placeholder="Mobile"
+          formControlName="mobile"
+          required
+        />
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="postAdminDetails()"
+      >
+        Click to Register
+      </button>
+    </form>
+  </div>
+  <div class="col-3 col-md-3 d-none d-md-block"></div>
+</div>
+
+<!-- 
+<ng-container>
   <div class="body">
     <div class="row">
       <div class="col-6 d-none d-md-block">
@@ -71,27 +141,9 @@
           </form>
         </div>
       </div>
-
-      <div class="col-4 col-md-4">
-        <h3 class="alert alert-info text-center">Admin Login</h3>
-
-        <input
-          type="email"
-          class="form-control mb-2"
-          placeholder="Enter Email"
-        />
-        <input
-          type="password"
-          class="form-control mb-2"
-          placeholder="Enter Password"
-        />
-        <input
-          type="button"
-          class="btn btn-outline-success w-100"
-          value="Login"
-        />
-      </div>
       <div className="col-6 col-md-6  d-none d-md-block"></div>
     </div>
   </div>
-</div>
+</div> 
+</ng-container>
+ -->

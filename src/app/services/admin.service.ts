@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 export class AdminService {
   constructor(private httpClient: HttpClient) {}
   createAdmin(data: any) {
-    return this.httpClient.post<any>('http://localhost:3000/admin', data).pipe(
+    return this.httpClient.post<any>(`http://localhost:3000/admins`, data).pipe(
       map((res: any) => {
         return res;
       })
@@ -14,7 +14,7 @@ export class AdminService {
   }
 
   getAllAdmins() {
-    return this.httpClient.get<any>('http://localhost:3000/admin').pipe(
+    return this.httpClient.get<any>(`http://localhost:3000/admins`).pipe(
       map((res: any) => {
         return res;
       })
@@ -22,7 +22,7 @@ export class AdminService {
   }
 
   getAdminById(id: number) {
-    return this.httpClient.get<any>(`http://localhost:3000/admin/${id}`).pipe(
+    return this.httpClient.get<any>(`http://localhost:3000/admins/${id}`).pipe(
       map((res: any) => {
         return res;
       })
@@ -31,7 +31,7 @@ export class AdminService {
 
   updateAdmin(data: any, id: number) {
     return this.httpClient
-      .put<any>(`http://localhost:3000/admin/${id}`, data)
+      .put<any>(`http://localhost:3000/admins/${id}`, data)
       .pipe(
         map((res: any) => {
           return res;
@@ -41,7 +41,7 @@ export class AdminService {
 
   deleteAdmin(id: number) {
     return this.httpClient
-      .delete<any>(`http://localhost:3000/users/${id}`)
+      .delete<any>(`http://localhost:3000/admins/${id}`)
       .pipe(
         map((res: any) => {
           return res;

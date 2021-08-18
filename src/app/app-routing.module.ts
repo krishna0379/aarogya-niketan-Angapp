@@ -7,8 +7,10 @@ import { BookingsStatusComponent } from './Components/bookings-status/bookings-s
 import { DepartmentsComponent } from './Components/departments/departments.component';
 import { FacilitiesComponent } from './Components/facilities/facilities.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { GenerateHospitalComponent } from './Components/generate-hospital/generate-hospital.component';
 import { HomeComponent } from './Components/home/home.component';
-import { HospitalInformationComponent } from './Components/hospital-information/hospital-information.component';
+import { HospitalDisplayComponent } from './Components/hospital-display/hospital-display.component';
+import { HospitalListComponent } from './Components/hospital-list/hospital-list.component';
 import { LoginComponent } from './Components/login/login.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { RegisterComponent } from './Components/register/register.component';
@@ -16,17 +18,20 @@ import { RegisterComponent } from './Components/register/register.component';
 const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'admin-list', component: AdminlistComponent },
-  { path: 'departments', component: DepartmentsComponent },
-  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'booking-status', component: BookingsStatusComponent },
-  { path: 'hospital-information', component: HospitalInformationComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'navbar', component: NavbarComponent },
+  { path: 'departments', component: DepartmentsComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'facilities', component: FacilitiesComponent },
+  { path: 'generate-hospital', component: GenerateHospitalComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'hospital-list', component: HospitalListComponent },
+  { path: 'hospital-display', component: HospitalDisplayComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'navbar', component: NavbarComponent },
   { path: 'register', component: RegisterComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
@@ -34,4 +39,19 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
- 
+export const routingComponents = [
+  AdminComponent,
+  AdminlistComponent,
+  AboutComponent,
+  BookingsStatusComponent,
+  DepartmentsComponent,
+  HomeComponent,
+  FacilitiesComponent,
+  FooterComponent,
+  GenerateHospitalComponent,
+  HospitalListComponent,
+  HospitalDisplayComponent,
+  LoginComponent,
+  NavbarComponent,
+  RegisterComponent,
+];

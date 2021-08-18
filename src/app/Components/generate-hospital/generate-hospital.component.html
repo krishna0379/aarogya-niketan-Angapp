@@ -1,0 +1,114 @@
+<section class="jumbotron text-center">
+  <div class="container mt-5">
+    <h1 class="jumbotron-heading">Generate Hosptial</h1>
+  </div>
+</section>
+
+<div class="container">
+  <div class="=row">
+    <div class="col-3 col-md-3 d-none d-md-block"></div>
+    <div class="col-12 col-md-6"></div>
+    <form [formGroup]="formValue">
+      <div class="form-group">
+        <label for="exampleInputEmail1"> Hospital Name</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="hospitalName"
+          placeholder="Enter Hosptial Name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Email Id</label>
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Enter Email Id"
+          formControlName="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Contact Number</label>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Enter the Help Desk Number"
+          formControlName="mobile"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Location</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter the Location"
+          formControlName="location"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Address</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter the Address"
+          formControlName="address"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">BedsAvailable</label>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Enter Number of beds Available"
+          formControlName="bedsAvailable"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1"> ventilations</label>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Enter Number Of Ventilations Available"
+          formControlName="ventilation"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">ICUs</label>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Enter Number of ICUS Available"
+          formControlName="icus"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">IsolationWard</label>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Enter the Address"
+          formControlName="isolationWard"
+          required
+        />
+      </div>
+      <div>
+        <button class="btn btn-success" (click)="postHospitalDetails()">
+          Add Hosptial
+        </button>
+      </div>
+    </form>
+    <div class="col-3 col-md-3 d-none d-md-block"></div>
+  </div>
+</div>
+<br />
+<br />
+<hr />
+<hr />

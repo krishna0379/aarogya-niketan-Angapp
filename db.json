@@ -38,21 +38,21 @@
     },
     {
       "id": 4,
-      "hospitalName": "srk Multi Speciality Hospital",
-      "mobile": "989768590",
-      "email": "krishna@gmail.com",
-      "location": "Bhimavaram",
-      "address": "sai ram nagar",
-      "bedsAvailable": 24,
-      "ventilation": 56,
-      "icus": 34,
-      "isolationWard": 32
+      "hospitalName": "he",
+      "mobile": 345455,
+      "email": "saagv",
+      "location": "dfg",
+      "address": "dfrf",
+      "bedsAvailable": 34,
+      "ventilation": 34,
+      "icus": 23,
+      "isolationWard": 456
     }
   ],
   "admins": [
     {
       "id": 1,
-      "name": "sai",
+      "name": "kittu",
       "email": "sai@gmail.com",
       "userName": "sai09",
       "password": "037ddgi",
@@ -67,12 +67,28 @@
       "mobile": "12445908"
     },
     {
-      "id": 3,
-      "name": "saikrish",
-      "email": "sai@gmail.com",
-      "userName": "Kittu09",
-      "password": "037dhi",
-      "mobile": "133456308"
+      "id": 5,
+      "name": "krishna",
+      "email": "krishna@gmail.com",
+      "userName": "skrishna",
+      "password": "sk00123",
+      "mobile": "73782890"
+    },
+    {
+      "id": 6,
+      "name": "aneesh",
+      "email": "aneesh@gamil.com",
+      "userName": "aneesh",
+      "password": "22741378hd",
+      "mobile": "762783778366"
+    },
+    {
+      "id": 7,
+      "name": "",
+      "email": "",
+      "userName": "",
+      "password": "",
+      "mobile": ""
     }
   ]
 }

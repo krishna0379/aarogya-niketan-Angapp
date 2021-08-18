@@ -1,9 +1,7 @@
- 
-
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="mobile"] {
+input[type="number"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -11,7 +9,6 @@ input[type="mobile"] {
   border: 3px solid rgb(103, 40, 250);
   box-sizing: border-box;
   border-radius: 8px;
-  
 }
 
 button {
@@ -24,26 +21,4 @@ button {
   border-radius: 8px;
   cursor: pointer;
   width: 100%;
-}
-
- 
-
- 
-
-
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }

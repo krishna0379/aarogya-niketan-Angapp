@@ -10,7 +10,7 @@ import { AdminService } from 'src/app/services/admin.service';
   providers: [AdminService],
 })
 export class RegisterComponent implements OnInit { 
-  @Input() item ='';
+ 
   formValue!: FormGroup;
   adminModel: AdminModel = new AdminModel();
   adminData!: any;

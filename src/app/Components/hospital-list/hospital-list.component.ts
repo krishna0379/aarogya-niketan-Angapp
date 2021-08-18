@@ -1,20 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HospitalModel } from 'src/app/models/hospital.model';
 import { HospitalService } from 'src/app/services/hospital.service';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css'],
-  providers: [HospitalService],
+  selector: 'app-hospital-list',
+  templateUrl: './hospital-list.component.html',
+  styleUrls: ['./hospital-list.component.css'],
+  providers:[HospitalService]
 })
-export class AdminComponent implements OnInit {
+export class HospitalListComponent implements OnInit {
   formValue!: FormGroup;
   hospitalModel: HospitalModel = new HospitalModel();
   hospitalData!: any;
-  showAdd!: boolean;
-  showUpdate!: boolean;
   constructor(
     private formbuilder: FormBuilder,
     private hospitalService: HospitalService
@@ -35,12 +33,6 @@ export class AdminComponent implements OnInit {
     this.getAllHospitals();
   }
 
-  clickAddHospital() {
-    this.formValue.reset();
-    this.showAdd = true;
-    this.showUpdate = false;
-  }
-
   postHospitalDetails() {
     this.hospitalModel.hospitalName = this.formValue.value.hospitalName;
     this.hospitalModel.email = this.formValue.value.email;
@@ -56,8 +48,7 @@ export class AdminComponent implements OnInit {
       (res) => {
         console.log(res);
         alert('Hospital is Added successfully..');
-        let ref = document.getElementById('cancel');
-        ref?.click();
+        
         this.formValue.reset();
         this.getAllHospitals();
       },
@@ -73,14 +64,6 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  getHospitalById(row: any) {
-    this.hospitalService.getHospitalById(row.id).subscribe((res) => {
-      alert(
-        `{Id: ${row.id} \n Name: ${row.name} \n Email: ${row.email} \n Username: ${row.userName}}`
-      );
-    });
-  }
-
   deleteHospital(row: any) {
     this.hospitalService.deleteHospital(row.id).subscribe((res) => {
       alert('Hospital Deleted');
@@ -89,9 +72,7 @@ export class AdminComponent implements OnInit {
   }
 
   onEdit(row: any) {
-    this.showAdd = false;
-    this.showUpdate = true;
-
+   
     this.hospitalModel.id = row.id;
 
     this.formValue.controls['hospitalName'].setValue(row.hospitalName);
@@ -120,10 +101,9 @@ export class AdminComponent implements OnInit {
       .updateHospital(this.hospitalModel, this.hospitalData.id)
       .subscribe(
         (res) => {
-          console.log(res);
+        
           alert('Hospital Details Updated successfully..');
-          let ref = document.getElementById('cancel');
-          ref?.click();
+          
           this.formValue.reset();
           this.getAllHospitals();
         },

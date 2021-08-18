@@ -8,7 +8,7 @@ export class HospitalService {
 
   createHospital(data: any) {
     return this.httpClient
-      .post<any>('http://localhost:3000/hospitalsInfo', data)
+      .post<any>(`http://localhost:3000/hospiatalsInfo`, data)
       .pipe(
         map((res: any) => {
           return res;
@@ -17,15 +17,17 @@ export class HospitalService {
   }
 
   getAllHospitals() {
-    return this.httpClient.get<any>('http://localhost:3000/hospitalsInfo').pipe(
-      map((res: any) => {
-        return res;
-      })
-    );
+    return this.httpClient
+      .get<any>(`http://localhost:3000/hospiatalsInfo`)
+      .pipe(
+        map((res: any) => {
+          return res;
+        })
+      );
   }
   getHospitalById(id: number) {
     return this.httpClient
-      .get<any>(`http://localhost:3000/hospitalInfo/${id}`)
+      .get<any>(`http://localhost:3000/hospiatalsInfo/${id}`)
       .pipe(
         map((res: any) => {
           return res;
@@ -35,7 +37,7 @@ export class HospitalService {
 
   updateHospital(data: any, id: number) {
     return this.httpClient
-      .put<any>(`http://localhost:3000/hospitalsInfo/${id}`, data)
+      .put<any>(`http://localhost:3000/hospiatalsInfo/${id}`, data)
       .pipe(
         map((res: any) => {
           return res;
@@ -45,7 +47,7 @@ export class HospitalService {
 
   deleteHospital(id: number) {
     return this.httpClient
-      .delete<any>(`http://localhost:3000/hospitalsInfo/${id}`)
+      .delete<any>(`http://localhost:3000/hospiatalsInfo/${id}`)
       .pipe(
         map((res: any) => {
           return res;

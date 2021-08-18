@@ -19,7 +19,7 @@
   </div>
 </section>
 
-<!-- tabel -->
+<!--  tabel -->
 <div class="col-md-12">
   <div class="table-container table-responsive">
     <table class="table mt-3">
@@ -43,12 +43,13 @@
           <td>{{ row.bedsAvailable }}</td>
           <td>{{ row.icus }}</td>
           <td>
-            <button class="btn btn-warning" (click) = "getHostipal(row)">
-               Get Details
+            <button class="btn btn-warning" (click)="getHospitalById(row)">
+              Get Details
             </button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+  <br><br>
 </div>
