@@ -98,17 +98,4 @@ export class AdminlistComponent implements OnInit {
         this.getAllAdmins();
       });
   }
-  /*  updateAdminDetails2(row: any) {
-    this.adminModel.name = this.formValue.value.name;
-    this.adminModel.email = this.formValue.value.email;
-    this.adminModel.userName = this.formValue.value.userName;
-    this.adminModel.password = this.formValue.value.password;
-    this.adminModel.mobile = this.formValue.value.mobile;
-    this.adminService.updateAdmin(this.adminData, row).subscribe((res) => {
-      alert('User Details Updated');
-      this.formValue.reset();
-      this.getAllAdmins();
-    });
-  } */
- 
 }

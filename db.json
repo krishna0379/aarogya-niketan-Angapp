@@ -48,7 +48,7 @@
       "icus": 12,
       "isolationWard": 2
     },
-     {
+    {
       "id": 5,
       "hospitalName": "NGR Care",
       "mobile": 667366368,
@@ -60,18 +60,30 @@
       "icus": 22,
       "isolationWard": 7
     },
-     {
-       "id": 6,
-       "hospitalName": "BVRm Care",
-       "mobile": 667366368,
-       "email": "NGrcare@gmail.com",
-       "location": "vizag",
-       "address": "beach road",
-       "bedsAvailable": 50,
-       "ventilation": 34,
-       "icus": 22,
-       "isolationWard": 7
-     }
+    {
+      "id": 6,
+      "hospitalName": "BVRm Care",
+      "mobile": 667366368,
+      "email": "NGrcare@gmail.com",
+      "location": "vizag",
+      "address": "beach road",
+      "bedsAvailable": 50,
+      "ventilation": 34,
+      "icus": 22,
+      "isolationWard": 7
+    },
+    {
+      "id": 7,
+      "hospitalName": "Health Care Hospital",
+      "mobile": 899348786,
+      "email": "helth@gmail.com",
+      "location": "Mumbai",
+      "address": "Ab road opp. x showroom",
+      "bedsAvailable": 120,
+      "ventilation": 20,
+      "icus": 30,
+      "isolationWard": 10
+    }
   ],
   "admins": [
     {
@@ -128,6 +140,27 @@
       "age": 0,
       "beds": 0,
       "mobile": 8727473544
+    },
+    {
+      "id": 4,
+      "patientName": "kittu2",
+      "age": 23,
+      "beds": 2,
+      "mobile": 3583756
+    },
+    {
+      "id": 5,
+      "patientName": "pk",
+      "age": 23,
+      "beds": 2,
+      "mobile": 8363464126
+    },
+    {
+      "id": 6,
+      "patientName": "Ravi",
+      "age": 23,
+      "beds": 1,
+      "mobile": 837288482
     }
   ]
 }

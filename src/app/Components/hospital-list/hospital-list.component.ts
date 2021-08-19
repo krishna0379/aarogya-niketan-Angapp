@@ -64,24 +64,6 @@ export class HospitalListComponent implements OnInit {
     });
   }
 
-  /*   getHospitalById(row: any) {
-    this.hospitalService.getHospitalById(row.id).subscribe((res) => {
-      alert(
-        `{Id: ${row.id} \n
-         Name: ${row.hospitalName} \n 
-         Email: ${row.email} \n 
-         Mobile: ${row.mobile} \n
-         Location:${row.location} \n
-         BedsAvailable:${row.bedsAvailable} \n
-         Address:${row.address} \n
-         ICU's:${row.icus} \n
-         Ventilations:${row.ventilation} \n
-         IsolationWard:${row.isolationWard} \n
-        }`
-      );
-    });
-  } */
-
   deleteHospital(row: any) {
     this.hospitalService.deleteHospital(row.id).subscribe((res) => {
       alert('Hospital Deleted Successfully');

@@ -1,11 +1,21 @@
-<div class="d-flex">
-  <button
-    type="button"
-    class="btn btn-primary"
-    data-bs-toggle="modal"
-    data-bs-target="#exampleModal"
-  >Book Slot</button>
-</div>
+<section class="jumbotron text-center section">
+  <div class="container mt-3">
+    <h1 class="jumbotron-heading">Aarogya Niketan Slot Booking Portal</h1>
+   <h3>Book Your slot in Advance</h3>
+    <p>
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Book Your Slot
+      </button>
+    </p>
+    <p>click the button to book slot</p>
+  </div>
+</section>
+
 <div
   class="modal fade"
   id="exampleModal"
@@ -16,7 +26,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Admin Details</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Book Your Slot Here </h5>
         <button
           type="button"
           class="btn-close"
@@ -27,11 +37,11 @@
       <div class="modal-body">
         <form [formGroup]="formValue">
           <div class="form-group">
-            <label for="exampleInputPassword1">PatientName Name</label>
+            <label for="exampleInputPassword1">Patient Name</label>
             <input
               type="text"
               class="form-control"
-              placeholder=" Enter the PatientName"
+              placeholder=" Enter the Patient Name"
               formControlName="patientName"
               required
             />
@@ -44,6 +54,28 @@
               class="form-control"
               placeholder="Mobile"
               formControlName="mobile"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Age</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder=" Enter the Patient age"
+              formControlName="age"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Beds</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter the Beds Required"
+              formControlName="beds"
               required
             />
           </div>

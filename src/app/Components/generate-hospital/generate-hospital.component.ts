@@ -13,7 +13,7 @@ export class GenerateHospitalComponent implements OnInit {
   formValue!: FormGroup;
   hospitalModel: HospitalModel = new HospitalModel();
   hospitalData!: any;
-   
+
   constructor(
     private formbuilder: FormBuilder,
     private hospitalService: HospitalService
@@ -31,7 +31,6 @@ export class GenerateHospitalComponent implements OnInit {
       icus: [''],
       isolationWard: [''],
     });
-    this.getAllHospitals();
   }
 
   postHospitalDetails() {
@@ -49,27 +48,12 @@ export class GenerateHospitalComponent implements OnInit {
       (res) => {
         console.log(res);
         alert('Hospital is Added successfully..');
-         
+
         this.formValue.reset();
-        this.getAllHospitals();
       },
       (err) => {
         alert('Something went Wrong');
       }
     );
-  }
-
-  getAllHospitals() {
-    this.hospitalService.getAllHospitals().subscribe((res) => {
-      this.hospitalData = res;
-    });
-  }
-
-  getHospitalById(row: any) {
-    this.hospitalService.getHospitalById(row.id).subscribe((res) => {
-      alert(
-        `{Id: ${row.id} \n Name: ${row.name} \n Email: ${row.email} \n Username: ${row.userName}}`
-      );
-    });
   }
 }
