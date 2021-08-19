@@ -4,7 +4,7 @@ import { AboutComponent } from './Components/about/about.component';
 import { AdminComponent } from './Components/admin/admin.component';
 import { AdminlistComponent } from './Components/adminlist/adminlist.component';
 import { BookingsStatusComponent } from './Components/bookings-status/bookings-status.component';
-import { DepartmentsComponent } from './Components/departments/departments.component';
+import { BookslotComponent } from './Components/bookslot/bookslot.component';
 import { FacilitiesComponent } from './Components/facilities/facilities.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { GenerateHospitalComponent } from './Components/generate-hospital/generate-hospital.component';
@@ -20,7 +20,6 @@ const routes: Routes = [
   { path: 'admin-list', component: AdminlistComponent },
   { path: 'about', component: AboutComponent },
   { path: 'booking-status', component: BookingsStatusComponent },
-  { path: 'departments', component: DepartmentsComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'facilities', component: FacilitiesComponent },
   { path: 'generate-hospital', component: GenerateHospitalComponent },
@@ -44,7 +43,7 @@ export const routingComponents = [
   AdminlistComponent,
   AboutComponent,
   BookingsStatusComponent,
-  DepartmentsComponent,
+  BookslotComponent,
   HomeComponent,
   FacilitiesComponent,
   FooterComponent,

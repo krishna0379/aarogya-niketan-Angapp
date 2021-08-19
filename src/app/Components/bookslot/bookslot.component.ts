@@ -4,12 +4,12 @@ import { BookingModel } from 'src/app/models/booking.model';
 import { BookingService } from 'src/app/services/booking.service';
 
 @Component({
-  selector: 'app-bookings-status',
-  templateUrl: './bookings-status.component.html',
-  styleUrls: ['./bookings-status.component.css'],
+  selector: 'app-bookslot',
+  templateUrl: './bookslot.component.html',
+  styleUrls: ['./bookslot.component.css'],
   providers: [BookingService],
 })
-export class BookingsStatusComponent implements OnInit {
+export class BookslotComponent implements OnInit {
   formValue!: FormGroup;
   bookingModel: BookingModel = new BookingModel();
   bookingData!: any;
@@ -26,7 +26,7 @@ export class BookingsStatusComponent implements OnInit {
     });
     this.getAllBookings();
   }
-  postBookinfDetails() {
+  postBookingDetails() {
     this.bookingModel.patientName = this.formValue.value.patientName;
 
     this.bookingModel.mobile = this.formValue.value.mobile;

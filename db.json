@@ -82,5 +82,17 @@
       "password": "08huug7gt7",
       "mobile": 5354565758
     }
+  ],
+  "booking": [
+    {
+      "id": 1,
+      "patientName": "ravi",
+      "mobile": "989768590"
+    },
+    {
+      "id": 2,
+      "patientName": "sai",
+      "mobile": "989768590"
+    }
   ]
 }

@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { AdminModel } from 'src/app/models/admin.model';
 import { AdminService } from 'src/app/services/admin.service';
 
@@ -93,7 +98,7 @@ export class AdminlistComponent implements OnInit {
         this.getAllAdmins();
       });
   }
- /*  updateAdminDetails2(row: any) {
+  /*  updateAdminDetails2(row: any) {
     this.adminModel.name = this.formValue.value.name;
     this.adminModel.email = this.formValue.value.email;
     this.adminModel.userName = this.formValue.value.userName;
@@ -105,4 +110,5 @@ export class AdminlistComponent implements OnInit {
       this.getAllAdmins();
     });
   } */
+ 
 }

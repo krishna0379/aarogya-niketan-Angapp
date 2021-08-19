@@ -1,0 +1,52 @@
+<p>bookslot works!</p>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Admin Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+            <label for="exampleInputPassword1">PatientName Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder=" Enter the PatientName"
+              formControlName="patientName"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Mobile</label>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Mobile"
+              formControlName="mobile"
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-primary" (click)="postBookingDetails()">BookSlot</button>
+      </div>
+    </div>
+  </div>
+</div>
