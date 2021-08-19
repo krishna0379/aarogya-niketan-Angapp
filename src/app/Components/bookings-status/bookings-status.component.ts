@@ -23,12 +23,15 @@ export class BookingsStatusComponent implements OnInit {
     this.formValue = this.formbuilder.group({
       patientName: [''],
       mobile: [''],
+      age: [''],
+      beds: [''],
     });
     this.getAllBookings();
   }
-  postBookinfDetails() {
+  postBookingDetails() {
     this.bookingModel.patientName = this.formValue.value.patientName;
-
+    this.bookingModel.age = this.formValue.value.age;
+    this.bookingModel.beds = this.formValue.value.beds;
     this.bookingModel.mobile = this.formValue.value.mobile;
 
     this.bookingService.createBooking(this.bookingModel).subscribe(
@@ -52,7 +55,7 @@ export class BookingsStatusComponent implements OnInit {
 
   getBookingById(row: any) {
     this.bookingService.getBookingById(row.id).subscribe((res) => {
-      alert(`{Id: ${row.id}\n Username: ${row.patientName}}`);
+      alert(`{Id: ${row.id}\n  Username: ${row.patientName}}`);
     });
   }
 
@@ -67,12 +70,15 @@ export class BookingsStatusComponent implements OnInit {
     this.bookingModel.id = row.id;
 
     this.formValue.controls['patientName'].setValue(row.patientName);
-
+    this.formValue.controls['age'].setValue(row.age);
+    this.formValue.controls['beds'].setValue(row.beds);
     this.formValue.controls['mobile'].setValue(row.mobile);
   }
 
   updateBookingDetails() {
-    this.bookingModel.patientName = this.formValue.value.name;
+    this.bookingModel.patientName = this.formValue.value.patientname;
+    this.bookingModel.age = this.formValue.value.age;
+    this.bookingModel.beds = this.formValue.value.beds;
     this.bookingModel.mobile = this.formValue.value.mobile;
     this.bookingService
       .updateBooking(this.bookingModel, this.bookingModel.id)

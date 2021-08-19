@@ -1,38 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HospitalModel } from 'src/app/models/hospital.model';
-import { BookingService } from 'src/app/services/booking.service';
+
 import { HospitalService } from 'src/app/services/hospital.service';
 
 @Component({
   selector: 'app-hospital-display',
   templateUrl: './hospital-display.component.html',
   styleUrls: ['./hospital-display.component.css'],
-  providers: [HospitalService, BookingService],
+  providers: [HospitalService],
 })
 export class HospitalDisplayComponent implements OnInit {
   formValue!: FormGroup;
   hospitalModel: HospitalModel = new HospitalModel();
   hospitalData!: any;
+  @Input()
+  hospitalLocation: string = '';
 
-  constructor(
-    private formbuilder: FormBuilder,
-    private hospitalService: HospitalService,
-    private bookingservice: BookingService
-  ) {}
+  constructor(private hospitalService: HospitalService) {}
 
   ngOnInit(): void {
-    this.formValue = this.formbuilder.group({
-      hospitalName: [''],
-      email: [''],
-      mobile: [''],
-      location: [''],
-      address: [''],
-      bedsAvailable: [''],
-      ventilation: [''],
-      icus: [''],
-      isolationWard: [''],
-    });
     this.getAllHospitals();
   }
 
@@ -59,5 +46,16 @@ export class HospitalDisplayComponent implements OnInit {
       );
     });
   }
-  
+  getHospitalByLocation() {
+    //this.hospitalLocation = this.formValue.value.hospitallocation;
+    //this.hospitalLocation = 'Bhimavaram';
+   //console.log(this.formValue.value);
+    console.log(this.hospitalLocation);
+    this.hospitalService
+      .getHospitalByLocation(this.hospitalLocation)
+      .subscribe((res) => {
+        this.hospitalData = res;
+        console.log(res);
+      });
+  }
 }

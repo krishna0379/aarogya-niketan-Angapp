@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'admin-list', component: AdminlistComponent },
   { path: 'about', component: AboutComponent },
   { path: 'booking-status', component: BookingsStatusComponent },
+  { path: 'book-slot', component: BookslotComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'facilities', component: FacilitiesComponent },
   { path: 'generate-hospital', component: GenerateHospitalComponent },

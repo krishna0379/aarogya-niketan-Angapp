@@ -47,7 +47,31 @@
       "ventilation": 34,
       "icus": 12,
       "isolationWard": 2
-    }
+    },
+     {
+      "id": 5,
+      "hospitalName": "NGR Care",
+      "mobile": 667366368,
+      "email": "NGrcare@gmail.com",
+      "location": "vizag",
+      "address": "beach road",
+      "bedsAvailable": 50,
+      "ventilation": 34,
+      "icus": 22,
+      "isolationWard": 7
+    },
+     {
+       "id": 6,
+       "hospitalName": "BVRm Care",
+       "mobile": 667366368,
+       "email": "NGrcare@gmail.com",
+       "location": "vizag",
+       "address": "beach road",
+       "bedsAvailable": 50,
+       "ventilation": 34,
+       "icus": 22,
+       "isolationWard": 7
+     }
   ],
   "admins": [
     {
@@ -87,12 +111,23 @@
     {
       "id": 1,
       "patientName": "ravi",
+      "age": 25,
+      "beds": 1,
       "mobile": "989768590"
     },
     {
       "id": 2,
       "patientName": "sai",
+      "age": 20,
+      "beds": 1,
       "mobile": "989768590"
+    },
+    {
+      "id": 3,
+      "patientName": "kittu",
+      "age": 0,
+      "beds": 0,
+      "mobile": 8727473544
     }
   ]
 }

@@ -1,5 +1,11 @@
-<p>bookslot works!</p>
-
+<div class="d-flex">
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+  >Book Slot</button>
+</div>
 <div
   class="modal fade"
   id="exampleModal"
@@ -45,7 +51,9 @@
       </div>
       <div class="modal-footer">
         <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        <button class="btn btn-primary" (click)="postBookingDetails()">BookSlot</button>
+        <button class="btn btn-primary" (click)="postBookingDetails()">
+          BookSlot
+        </button>
       </div>
     </div>
   </div>

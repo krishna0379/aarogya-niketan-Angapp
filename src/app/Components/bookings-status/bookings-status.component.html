@@ -4,8 +4,6 @@
   </div>
 </section>
 
-
-
 <div class="col-md-12">
   <div class="table-conatiner table-responsive">
     <table class="table mt-3">
@@ -13,14 +11,18 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">PatientName</th>
+          <th scope="col">Age</th>
+          <th scope="col">Beds</th>
           <th scope="col">Mobile</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
       <tbody class="table table-bordered table-success">
         <tr *ngFor="let row of bookingData">
-           <td>{{ row.id }}</td>
+          <td>{{ row.id }}</td>
           <td>{{ row.patientName }}</td>
+          <td>{{ row.age }}</td>
+          <td>{{ row.beds }}</td>
           <td>{{ row.mobile }}</td>
           <td>
             <button
@@ -39,5 +41,3 @@
     </table>
   </div>
 </div>
-
-
